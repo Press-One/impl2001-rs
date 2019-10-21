@@ -1,5 +1,5 @@
 [package]
-name = "impl2001_rust"
+name = "impl2001-rs"
 version = "0.1.0"
 authors = ["huoju <virushuo@gmail.com>"]
 edition = "2018"
