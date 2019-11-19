@@ -208,7 +208,6 @@ impl Pip2001 {
         data: &HashMap<String, String>,
         meta: &HashMap<String, pip::InputObject>,
     ) -> std::result::Result<Pip2001MessageType, &'static str> {
-        println!("fn verify_fields");
         //let data_exist = data.contains_key("allow");
         if data.contains_key("allow") || data.contains_key("deny") {
             if data.contains_key("topic") {
