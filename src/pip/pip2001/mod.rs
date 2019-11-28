@@ -84,14 +84,6 @@ impl pip::Pip for Pip2001 {
 
     //fn new(data: &HashMap<&str, &str>) -> Pip2001 {
     fn new() -> Pip2001 {
-        //for (k , v) in data{
-        //    println!("{}: \"{}\"", k, v);
-        //}
-
-        //let datatype = data.get("topic");
-        //let exist = data.contains_key("topic1");
-        //println!("{:?}", datatype.unwrap());
-        //println!("exist {:?}", exist);
         Pip2001 {
             Type: pip::PipId::PIP2001,
             VERSION: 1,
@@ -160,6 +152,11 @@ impl pip::Pip for Pip2001 {
         if !v["file_hash"].is_null() {
             if let Value::String(_v) = &v["file_hash"] {
                 data.insert(String::from("file_hash"), _v.clone());
+            }
+        }
+        if !v["hash_alg"].is_null() {
+            if let Value::String(_v) = &v["hash_alg"] {
+                data.insert(String::from("hash_alg"), _v.clone());
             }
         }
         if !v["uris"].is_null() {
