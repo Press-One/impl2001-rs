@@ -159,9 +159,9 @@ impl pip::Pip for Pip2001 {
                 data.insert(String::from("hash_alg"), _v.clone());
             }
         }
-        if !v["updated_file_id"].is_null() {
-            if let Value::String(_v) = &v["updated_file_id"] {
-                data.insert(String::from("updated_file_id"), _v.clone());
+        if !v["updated_tx_id"].is_null() {
+            if let Value::String(_v) = &v["updated_tx_id"] {
+                data.insert(String::from("updated_tx_id"), _v.clone());
             }
         }
         if !v["uris"].is_null() {
